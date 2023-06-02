@@ -1,13 +1,40 @@
 html{
     font-size: 62.%;
 }
+
 body{
    font-size: 16px; 
 }
+
 .titulo{
     text-align: center;
     font-size: 4.8rem;
-    font-family: 'Indie Flower', cursive;}
-,.titulo span{
+    font-family: 'Indie Flower', cursive;
+}
+
+.titulo span{
     font-size: 2rem;
+}
+.contenedor{
+    width: 120rem;
+    margin: 0 auto ;
+}
+.navBg{
+    background-color: #123142;
+
+}
+.menu-navegacion {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.menu-navegacion a{
+    padding: 1rem;
+    color: #e9f0c9;
+    text-decoration: none;
+    font-size: 2rem;
+    font-weight: bold;
+}
+.menu-navegacion a:hover{
+    background-color: #20130a;
 }
