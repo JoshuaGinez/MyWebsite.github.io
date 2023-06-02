@@ -16,26 +16,31 @@ body{
     font-size: 2rem;
 }
 .contenedor{
-    width: 120rem;
+    max-width: 120rem;
     margin: 0 auto ;
 }
 .navBg{
-    background-color: #123142;
+    background-color: #657275;
 
 }
 .menu-navegacion {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     justify-content: space-between;
 }
 .menu-navegacion a{
     padding: 1rem;
-    color: #e9f0c9;
+    color: #ebe68d;
     text-decoration: none;
     font-size: 2rem;
     font-weight: bold;
 }
 .menu-navegacion a:hover{
-    background-color: #20130a;
+    background-color: #17181f;
 }
 
+@media (min-width: 768px){ 
+    .menu-navegacion{
+        flex-direction:row;
+    }
+}
