@@ -43,6 +43,15 @@ h1,h2,h3{
     max-width: 120rem;
     margin: 0 auto ;
 }
+.w-100{
+    width: 100%;
+}
+.flex{
+    display: flex;
+}
+.alinear-derecha{
+    justify-content: flex-end;
+}
 .navBg{
     background-color: #657275;
 
@@ -105,7 +114,10 @@ h1,h2,h3{
     border-radius: .5;
     width: 90%;
     text-align: center;
-
+    border: none;
+}
+.boton:hover{
+    cursor: pointer;
 }
 @media (min-width: 670px){ 
     .boton{
@@ -122,4 +134,68 @@ h1,h2,h3{
 .ubicacion{
     display: flex;
     align-items: flex-end;
+}
+.servicio{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.servicio p{
+line-height: 2;
+text-align: center;
+}
+.servicio h3{
+    color: #657275;
+    font-weight:normal;
+}
+.servicio .iconos{
+    height: 15rem;
+    width: 15rem;
+    background-color: goldenrod;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.formulario{
+    background-color: #657275;
+    width: min( 60rem, 100%);
+    margin: 0, auto;
+    padding: 2rem;
+    border-radius: 1rem;
+
+}
+.formulario fieldset{
+    border: none;
+}
+.formulario legend{
+    text-align: center;
+    font-size: 1.8rem;
+    text-transform: uppercase;
+    font-weight: 700;
+    margin-bottom: 2rem;
+    color:#DFE9F3;
+}
+.contenedor-campos{
+
+}
+.campo{
+    margin-bottom: 1rem;
+}
+.campo label{
+    color: #DFE9F3;
+    font-weight: bold;
+    margin-bottom: .5rem;
+    display: block;
+}
+.input-text{
+width: 100%;
+border: none;
+padding: 1s.5rem;
+border-radius: .5rem;
+}
+
+.enviar .boton{
+    width: 100%
+
 }
