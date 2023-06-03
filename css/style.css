@@ -6,8 +6,10 @@ html{
         box-sizing: inherit;
     }
 
+
 body{
    font-size: 16px; 
+   background-image: linear-gradient(to top, #DFE9F3 0%, #fff 100%);
 }
 
 h1{
@@ -27,7 +29,13 @@ h3{
 h1,h2,h3{
     text-align: center;
 }
-
+.sombra {
+    -webkit-box-shadow: 0px 5px 15px 0px rgba(0,0,0,0.67);
+    -moz-box-shadow: 0px 5px 15px 0px rgba(0,0,0,0.67);
+    box-shadow: 0px 5px 15px 0px rgba(0,0,0,0.67);
+    background-color:#fff ;
+    padding: 2rem;
+}
 .titulo span{
     font-size: 2rem;
 }
@@ -46,7 +54,7 @@ h1,h2,h3{
 }
 .menu-navegacion a{
     padding: 1rem;
-    color: #ebe68d;
+    color: whitesmoke;
     text-decoration: none;
     font-size: 2rem;
     font-weight: bold;
@@ -57,16 +65,18 @@ h1,h2,h3{
 
 @media (min-width: 768px){ 
     .menu-navegacion{
-        flex-direction:row;
-       
+        flex-direction: row;
+        justify-content:space-between;
     }
 }
+
 .hero{
     background-image: url(../sources/img/background.jfif);
     background-repeat: no-repeat;
     background-size: cover;
     height: 450px;
     position: relative;
+    margin-bottom: 2rem;
 }
 .contenido_hero{
     position: absolute;
@@ -78,8 +88,33 @@ h1,h2,h3{
     align-items: center;
     justify-content: center;
 }
+.boton{
+    background-color: whitesmoke;
+    color: black;
+    padding: 1rem 3rem;
+    margin-top: 1rem;
+    font-size: 2rem;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: bold;
+    border-radius: .5;
+    width: 90%;
+    text-align: center;
 
-.contenido_hero h2, .contenido_hero p{
+}
+@media (min-width: 670px){ 
+    .boton{
+        width: auto;
+    }
+    
+}
+
+.contenido_hero h2,
+.contenido_hero p{
     color:beige;
 
+}
+.ubicacion{
+    display: flex;
+    align-items: flex-end;
 }
