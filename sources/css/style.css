@@ -60,9 +60,69 @@ html {
     background-color: #17181f;
     border-radius: 5px;
     color: #edc98c;
+    box-shadow: 0 0 7px 1px #057dff;
 
   }
+  /*ESTILOS DE BOTÓN DE CONTACTO*/
+  #btnContacto { 
+    box-shadow:none;
+    padding: 10px 30px;
+    border: none;
+    outline: none;
+    color: #fff;
+    cursor: pointer;
+    border-radius: 12px;
+    position: relative;
+    z-index: 0;
+    font-weight: bold;
+    text-decoration: none;
+    background-color: transparent;
+  }
   
+  #btnContacto::after {
+    content: "";
+    z-index: -1;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: #333;
+    left: 0;
+    top: 0;
+    border-radius: 12px;
+  }
+  
+  #btnContacto::before {
+    content: "";
+    background: linear-gradient(
+      45deg,
+      #FF0000, #FF7300, #FFFB00, #48FF00,
+      #00FFD5, #002BFF, #FF00C8, #FF0000
+    );
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    background-size: 600%;
+    z-index: -1;
+    width: calc(100% + 4px);
+    height: calc(100% + 4px);
+    border-radius: 5px;
+    filter: blur(8px);
+    animation: glowing 20s linear infinite;
+    transition: opacity .3s ease-in-out;
+    opacity: 0;
+  }
+   /*ANIMACION DE BOTÓN DE CONTACTO*/
+  @keyframes glowing { 
+    0% { background-position: 0 0; }
+    50% { background-position: 400% 0; }
+    100% { background-position: 0 0; }
+  }
+  #btnContacto:hover::before{
+    opacity: 1;
+  }
+  #btnContacto:active::after{
+    background: transparent;
+  }
   /* HERO CON FONDO OSCURO */
   .hero {
     background-image: url(../img/background.webp);
