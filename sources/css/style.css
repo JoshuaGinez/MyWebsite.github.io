@@ -14,6 +14,10 @@ body {
   margin: 0;
   padding: 0;
 }
+a{
+  text-decoration:none;
+
+}
 
 /* TIPOGRAFÍA */
 h1 {
@@ -38,7 +42,7 @@ h1, h2, h3 {
 }
 
 /* ANIMACIÓN GLITCH */
-.titulo.glitch:hover {
+.glitch:hover {
   animation: glitch 0.3s infinite;
 }
 @keyframes glitch {
@@ -125,6 +129,7 @@ h1, h2, h3 {
   background-image: url(../img/background.webp);
   background-repeat: no-repeat;
   background-size: cover;
+  background-position: center;
   height: 450px;
   position: relative;
   margin-bottom: 2rem;
