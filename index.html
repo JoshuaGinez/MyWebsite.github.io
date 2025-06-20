@@ -4,26 +4,31 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<link rel="stylesheet" href="./sources/css/normalize.css">
+  <link rel="stylesheet" href="./sources/css/normalize.css">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="./sources/css/style.css">
-
   <title>Joshua Ginez Freelance</title>
+  <style>
+    html, body {
+      margin: 0;
+      padding: 0;
+    }
+  </style>
 </head>
 <body>
   <!-- HEADER -->
   <header class="bg-dark text-white text-center py-4">
-    <h1 class="fw-bold titulo glitch">Joshua Edwin Ginez Eligo <span class="text-info">Developer Jr</span></h1>
+    <h1 class="fw-bold titulo glitch">Joshua Edwin Ginez Eligio <span class="text-info">Developer Jr</span></h1>
   </header>
 
   <!-- NAVBAR -->
   <nav class="navbar navbar-expand-lg navBg">
     <div class="container justify-content-spacearound menu-navegacion">
-      <a class="btn nav-link " href="#">Inicio</a>
-      <a class="btn nav-link " href="">Sobre mí</a>
-      <a class="btn nav-link " href="#">Portafolio</a>
-      <a class=" nav-link  " id='btnContacto' href="#">Contacto</a>
+      <a class="btn nav-link" href="#">Inicio</a>
+      <a class="btn nav-link" href="#">Sobre mí</a>
+      <a class="btn nav-link" href="#">Portafolio</a>
+      <a class="nav-link" id="btnContacto" href="#">Contacto</a>
     </div>
   </nav>
 
@@ -46,29 +51,23 @@
     </div>
   </section>
 
-  <!-- SERVICIOS -->
-  <main class="container my-5">
-    <h2 class="text-center mb-4">Mis servicios</h2>
+  <!-- SERVICIOS Y CONTACTO -->
+  <main class="container-fluid bgcontainer m-0 py-5">
+    <h2 class="text-center my-0 py-3">Mis servicios</h2>
     <div class="servicios">
       <section class="servicio">
-        <h3>Servicio de soporte tecnico</h3>
-        <div class="iconos">
-          <!-- Icono -->
-        </div>
-        <p>Brindo servicio de soporte preventivo y correctivo a equipos de computo.</p>
+        <h3>Servicio de soporte técnico</h3>
+        <div class="iconos"></div>
+        <p>Brindo servicio de soporte preventivo y correctivo a equipos de cómputo.</p>
       </section>
       <section class="servicio">
         <h3>Desarrollo de software</h3>
-        <div class="iconos">
-          <!-- Icono -->
-        </div>
+        <div class="iconos"></div>
         <p>Tiendas en línea personalizadas, seguras y fáciles de administrar.</p>
       </section>
       <section class="servicio">
-        <h3>Informatica forense, Instaciones y redes</h3>
-        <div class="iconos">
-          <!-- Icono -->
-        </div>
+        <h3>Informática forense, instalaciones y redes</h3>
+        <div class="iconos"></div>
         <p>Sitios web visualmente atractivos con enfoque en experiencia de usuario.</p>
       </section>
     </div>
@@ -106,11 +105,12 @@
   </main>
 
   <!-- FOOTER -->
-  <footer class="bg-dark text-white text-center py-4 mt-5">
+  <footer class="bg-dark text-white text-center py-4">
     <h2>Datos de contacto</h2>
     <p class="mb-0">Todos los derechos reservados a Joshua Ginez</p>
   </footer>
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="./sources/scripts/main.js"></script>
 </body>
 </html>

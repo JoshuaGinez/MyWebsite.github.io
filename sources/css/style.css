@@ -1,279 +1,267 @@
 /* RESET */
 html {
-    font-size: 62.5%;
-    box-sizing: border-box;
-    scroll-snap-type: x mandatory;
-  }
-  
-  *, *:before, *:after {
-    box-sizing: inherit;
-  }
-  
-  body {
-    font-size: 1.6rem;
-    background-image: linear-gradient(to top, #DFE9F3 0%, #fff 100%);
-    font-family: 'Segoe UI', sans-serif;
-  }
-  
-  /* TIPOGRAFÍA */
-  h1 {
-    font-size: 3.8rem;
-    font-family: 'Indie Flower', cursive;
-  }
-  h2 {
-    font-size: 2.8rem;
-  }
-  h3 {
-    font-size: 1.8rem;
-  }
-  h1, h2, h3 {
-    text-align: center;
-  }
-  
-  /* SOMBRA PERSONALIZADA */
-  .sombra {
-    box-shadow: 0px 5px 15px 0px rgba(0, 0, 0, 0.67);
-    background-color: #fff;
-    padding: 2rem;
-  }
-  
-  /* TÍTULO CON ANIMACIÓN */
-  .titulo.glitch:hover {
-    animation: glitch 0.3s infinite;
-  }
-  .titulo span {
-    font-size: 2rem;
-  }
-  
-  /* NAVBAR PERSONALIZADA */
-  .navBg {
-    background-color: #657275;
-  }
-  .menu-navegacion a {
-    padding: 1rem;
-    color: whitesmoke;
-    text-decoration: none;
-    font-size: 2rem;
-    font-weight: bold;
-  }
-  .menu-navegacion a:hover {
-    background-color: #17181f;
-    border-radius: 5px;
-    color: #edc98c;
-    box-shadow: 0 0 7px 1px #057dff;
+  font-size: 62.5%;
+  box-sizing: border-box;
+  scroll-snap-type: x mandatory;
+}
+*, *::before, *::after {
+  box-sizing: inherit;
+}
+body {
+  font-size: 1.6rem;
+  background-image: linear-gradient(to top, #DFE9F3 0%, #fff 100%);
+  font-family: 'Segoe UI', sans-serif;
+  margin: 0;
+  padding: 0;
+}
 
-  }
-  /*ESTILOS DE BOTÓN DE CONTACTO*/
-  #btnContacto { 
-    box-shadow:none;
-    padding: 10px 30px;
-    border: none;
-    outline: none;
-    color: #fff;
-    cursor: pointer;
-    border-radius: 12px;
-    position: relative;
-    z-index: 0;
-    font-weight: bold;
-    text-decoration: none;
-    background-color: transparent;
-  }
-  
-  #btnContacto::after {
-    content: "";
-    z-index: -1;
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    background-color: #333;
-    left: 0;
-    top: 0;
-    border-radius: 12px;
-  }
-  
-  #btnContacto::before {
-    content: "";
-    background: linear-gradient(
-      45deg,
-      #FF0000, #FF7300, #FFFB00, #48FF00,
-      #00FFD5, #002BFF, #FF00C8, #FF0000
-    );
-    position: absolute;
-    top: -2px;
-    left: -2px;
-    background-size: 600%;
-    z-index: -1;
-    width: calc(100% + 4px);
-    height: calc(100% + 4px);
-    border-radius: 5px;
-    filter: blur(8px);
-    animation: glowing 20s linear infinite;
-    transition: opacity .3s ease-in-out;
-    opacity: 0;
-  }
-   /*ANIMACION DE BOTÓN DE CONTACTO*/
-  @keyframes glowing { 
-    0% { background-position: 0 0; }
-    50% { background-position: 400% 0; }
-    100% { background-position: 0 0; }
-  }
-  #btnContacto:hover::before{
-    opacity: 1;
-  }
-  #btnContacto:active::after{
-    background: transparent;
-  }
-  /* HERO CON FONDO OSCURO */
-  .hero {
-    background-image: url(../img/background.webp);
-    background-repeat: no-repeat;
-    background-size:cover;
-    height: 450px;
-    position: relative;
-    margin-bottom: 2rem;
-  }
-  .contenido_hero {
-    position: absolute;
-    background-color: rgba(0, 0, 0, 0.7);
-    width: 100%;
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-  }
-  .contenido_hero h2,
-  .contenido_hero p {
-    color: beige;
-  }
-  
-  /* BOTÓN PERSONALIZADO */
+/* TIPOGRAFÍA */
+h1 {
+  font-size: 3.8rem;
+  font-family: 'Indie Flower', cursive;
+}
+h2 {
+  font-size: 2.8rem;
+}
+h3 {
+  font-size: 1.8rem;
+}
+h1, h2, h3 {
+  text-align: center;
+}
+
+/* SOMBRA */
+.sombra {
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.67);
+  background-color: #fff;
+  padding: 2rem;
+}
+
+/* ANIMACIÓN GLITCH */
+.titulo.glitch:hover {
+  animation: glitch 0.3s infinite;
+}
+@keyframes glitch {
+  0% { text-shadow: red -2px 0, cyan 2px 0; }
+  25% { text-shadow: red 2px 0, cyan -2px 0; }
+  50% { text-shadow: red -1px 0, cyan 1px 0; }
+  75% { text-shadow: red 1px 0, cyan -1px 0; }
+  100% { text-shadow: red -2px 0, cyan 2px 0; }
+}
+
+/* NAVBAR */
+.navBg {
+  background-color: #657275;
+}
+.menu-navegacion a {
+  padding: 1rem;
+  color: whitesmoke;
+  text-decoration: none;
+  font-size: 2rem;
+  font-weight: bold;
+}
+.menu-navegacion a:hover {
+  background-color: #17181f;
+  border-radius: 5px;
+  color: #edc98c;
+  box-shadow: 0 0 7px 1px #057dff;
+}
+
+/* BOTÓN DE CONTACTO */
+#btnContacto {
+  padding: 10px 30px;
+  border: none;
+  outline: none;
+  color: #fff;
+  cursor: pointer;
+  border-radius: 12px;
+  position: relative;
+  z-index: 0;
+  font-weight: bold;
+  background-color: transparent;
+}
+#btnContacto::after {
+  content: "";
+  z-index: -1;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: #333;
+  left: 0;
+  top: 0;
+  border-radius: 12px;
+}
+#btnContacto::before {
+  content: "";
+  background: linear-gradient(45deg, #FF0000, #FF7300, #FFFB00, #48FF00, #00FFD5, #002BFF, #FF00C8, #FF0000);
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  background-size: 600%;
+  z-index: -1;
+  width: calc(100% + 4px);
+  height: calc(100% + 4px);
+  border-radius: 12px;
+  filter: blur(8px);
+  animation: glowing 20s linear infinite;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+}
+#btnContacto:hover::before {
+  opacity: 1;
+}
+#btnContacto:active::after {
+  background: transparent;
+}
+@keyframes glowing {
+  0% { background-position: 0 0; }
+  50% { background-position: 400% 0; }
+  100% { background-position: 0 0; }
+}
+
+/* HERO */
+.hero {
+  background-image: url(../img/background.webp);
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 450px;
+  position: relative;
+  margin-bottom: 2rem;
+}
+.contenido_hero {
+  position: absolute;
+  background-color: rgba(0, 0, 0, 0.7);
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.contenido_hero h2,
+.contenido_hero p {
+  color: beige;
+}
+
+/* BOTÓN GENÉRICO */
+.boton {
+  background-color: whitesmoke;
+  color: black;
+  padding: 1rem 3rem;
+  margin-top: 1rem;
+  font-size: 2rem;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-weight: bold;
+  border-radius: 0.5rem;
+  width: 90%;
+  text-align: center;
+  border: none;
+}
+.boton:hover {
+  cursor: pointer;
+}
+@media (min-width: 670px) {
   .boton {
-    background-color: whitesmoke;
-    color: black;
-    padding: 1rem 3rem;
-    margin-top: 1rem;
-    font-size: 2rem;
-    text-decoration: none;
-    text-transform: uppercase;
-    font-weight: bold;
-    border-radius: .5rem;
-    width: 90%;
-    text-align: center;
-    border: none;
+    width: auto;
   }
-  .boton:hover {
-    cursor: pointer;
+}
+
+/* FONDO PARA EL MAIN */
+
+
+/* UBICACIÓN */
+.ubicacion {
+  display: flex;
+  align-items: flex-end;
+}
+
+/* SERVICIOS */
+.servicios {
+  background-color: rgba(118, 159, 210, 0.9);
+  box-shadow: 0 25px 45px rgba(0, 0, 0, 0.2);
+  border-radius: 20px;
+  border: 2px solid rgba(225, 225, 225, 0.5);
+  border-right: 2px solid rgba(255, 255, 255, 0.2);
+  border-bottom: 2px solid rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(10px);
+  padding: 2rem;
+}
+.servicio {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  scroll-snap-align: center;
+  scroll-snap-stop: always;
+}
+.servicio p {
+  line-height: 2;
+  text-align: center;
+}
+.servicio h3 {
+  color: #f0f1f2;
+  font-weight: normal;
+}
+.servicio .iconos {
+  height: 15rem;
+  width: 15rem;
+  background-color: goldenrod;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* FORMULARIO */
+.formulario {
+  background-color: #657275;
+  width: min(60rem, 100%);
+  margin: 0 auto;
+  padding: 2rem;
+  border-radius: 1rem;
+}
+.formulario fieldset {
+  border: none;
+}
+.formulario legend {
+  text-align: center;
+  font-size: 1.8rem;
+  text-transform: uppercase;
+  font-weight: 700;
+  margin-bottom: 2rem;
+  color: #DFE9F3;
+}
+.campo {
+  margin-bottom: 1rem;
+}
+.campo label {
+  color: #DFE9F3;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+  display: block;
+}
+.campo textarea {
+  height: 20rem;
+}
+.input-text {
+  width: 100%;
+  border: none;
+  padding: 1.5rem;
+  border-radius: 0.5rem;
+}
+.enviar .boton {
+  width: 100%;
+}
+
+/* RESPONSIVE */
+@media (min-width: 768px) {
+  .menu-navegacion {
+    flex-direction: row;
+    justify-content: space-between;
   }
-  @media (min-width: 670px) {
-    .boton {
-      width: auto;
-    }
+  .servicios {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
   }
-  
-  /* UBICACIÓN */
-  .ubicacion {
-    display: flex;
-    align-items: flex-end;
-  }
-  
-  /* SERVICIOS */
-  .servicio {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    scroll-snap-align: center;
-    scroll-snap-stop: always;
-  }
-  .servicio p {
-    line-height: 2;
-    text-align: center;
-  }
-  .servicio h3 {
-    color: #657275;
-    font-weight: normal;
-  }
-  .servicio .iconos {
-    height: 15rem;
-    width: 15rem;
-    background-color: goldenrod;
-    border-radius: 50%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-  
-  /* FORMULARIO */
-  .formulario {
-    background-color: #657275;
-    width: min(60rem, 100%);
-    margin: 0 auto;
-    padding: 2rem;
-    border-radius: 1rem;
-  }
-  .formulario fieldset {
-    border: none;
-  }
-  .formulario legend {
-    text-align: center;
-    font-size: 1.8rem;
-    text-transform: uppercase;
-    font-weight: 700;
-    margin-bottom: 2rem;
-    color: #DFE9F3;
-  }
-  .campo {
-    margin-bottom: 1rem;
-  }
-  .campo label {
-    color: #DFE9F3;
-    font-weight: bold;
-    margin-bottom: .5rem;
-    display: block;
-  }
-  .campo textarea {
-    height: 20rem;
-  }
-  .input-text {
-    width: 100%;
-    border: none;
-    padding: 1.5rem;
-    border-radius: .5rem;
-  }
-  .enviar .boton {
-    width: 100%;
-  }
-  
-  /* MEDIA QUERIES */
-  @media (min-width: 768px) {
-    .menu-navegacion {
-      flex-direction: row;
-      justify-content: space-between;
-    }
-  
-    .servicios {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 2rem;
-    }
-  }
-  
-  /* ANIMACIÓN GLITCH */
-  @keyframes glitch {
-    0% {
-      text-shadow: red -2px 0, cyan 2px 0;
-    }
-    25% {
-      text-shadow: red 2px 0, cyan -2px 0;
-    }
-    50% {
-      text-shadow: red -1px 0, cyan 1px 0;
-    }
-    75% {
-      text-shadow: red 1px 0, cyan -1px 0;
-    }
-    100% {
-      text-shadow: red -2px 0, cyan 2px 0;
-    }
-  }
-  
+}
